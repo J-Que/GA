@@ -1,0 +1,4 @@
+1. Create file for reading in parameters, attributes, and the problem nodes
+2. Create script to compile parameters in main script
+3. Try profiling code
+4. Set up IDE with code, git, and tests
