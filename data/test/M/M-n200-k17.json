@@ -2,6 +2,7 @@
     "Problem": "M-n200-k17",
     "Set": "Set M",
     "Capacity": 200,
+    "Dimension": 200,
     "Best": 1373.0,
     "Optimal": true,
     "Encoded Bits": 24,

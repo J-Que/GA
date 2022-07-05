@@ -2,6 +2,7 @@
     "Problem": "P-n101-k4",
     "Set": "Set P",
     "Capacity": 400,
+    "Dimension": 101,
     "Best": 681.0,
     "Optimal": true,
     "Encoded Bits": 24,

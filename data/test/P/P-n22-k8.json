@@ -2,6 +2,7 @@
     "Problem": "P-n22-k8",
     "Set": "Set P",
     "Capacity": 3000,
+    "Dimension": 22,
     "Best": 603.0,
     "Optimal": true,
     "Encoded Bits": 29,

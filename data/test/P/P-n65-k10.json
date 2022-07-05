@@ -2,6 +2,7 @@
     "Problem": "P-n65-k10",
     "Set": "Set P",
     "Capacity": 130,
+    "Dimension": 65,
     "Best": 792.0,
     "Optimal": true,
     "Encoded Bits": 24,

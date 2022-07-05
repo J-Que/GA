@@ -2,6 +2,7 @@
     "Problem": "M-n151-k12",
     "Set": "Set M",
     "Capacity": 200,
+    "Dimension": 151,
     "Best": 1053.0,
     "Optimal": true,
     "Encoded Bits": 24,

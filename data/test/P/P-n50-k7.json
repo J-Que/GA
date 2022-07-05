@@ -2,6 +2,7 @@
     "Problem": "P-n50-k7",
     "Set": "Set P",
     "Capacity": 150,
+    "Dimension": 50,
     "Best": 554.0,
     "Optimal": true,
     "Encoded Bits": 23,

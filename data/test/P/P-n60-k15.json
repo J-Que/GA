@@ -2,6 +2,7 @@
     "Problem": "P-n60-k15",
     "Set": "Set P",
     "Capacity": 80,
+    "Dimension": 60,
     "Best": 968.0,
     "Optimal": true,
     "Encoded Bits": 24,

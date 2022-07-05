@@ -2,6 +2,7 @@
     "Problem": "P-n76-k4",
     "Set": "Set P",
     "Capacity": 350,
+    "Dimension": 76,
     "Best": 593.0,
     "Optimal": true,
     "Encoded Bits": 24,

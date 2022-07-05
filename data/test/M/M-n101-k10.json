@@ -2,6 +2,7 @@
     "Problem": "M-n101-k10",
     "Set": "Set M",
     "Capacity": 200,
+    "Dimension": 101,
     "Best": 820.0,
     "Optimal": true,
     "Encoded Bits": 24,

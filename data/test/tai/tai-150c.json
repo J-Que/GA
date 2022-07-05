@@ -2,6 +2,7 @@
     "Problem": "tai150c",
     "Set": "Rochat and Tailard",
     "Capacity": 2021,
+    "Dimension": 151,
     "Best": 2358.66,
     "Optimal": true,
     "Encoded Bits": 31,

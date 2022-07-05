@@ -2,6 +2,7 @@
     "Problem": "tai75c",
     "Set": "Rochat and Tailard",
     "Capacity": 1122,
+    "Dimension": 76,
     "Best": 1291.01,
     "Optimal": true,
     "Encoded Bits": 31,

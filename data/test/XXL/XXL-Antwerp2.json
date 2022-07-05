@@ -2,6 +2,7 @@
     "Problem": "Antwerp2",
     "Set": "Arnold, Genreau, Sorensen",
     "Capacity": 100,
+    "Dimension": 7001,
     "Best": 291350.0,
     "Optimal": false,
     "Encoded Bits": 28,

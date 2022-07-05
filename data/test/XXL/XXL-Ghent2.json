@@ -2,6 +2,7 @@
     "Problem": "Ghent2",
     "Set": "Arnold, Genreau, Sorensen",
     "Capacity": 170,
+    "Dimension": 11001,
     "Best": 257748.0,
     "Optimal": false,
     "Encoded Bits": 28,

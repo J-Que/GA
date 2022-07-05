@@ -2,6 +2,7 @@
     "Problem": "Flanders2",
     "Set": "Arnold, Genreau, Sorensen",
     "Capacity": 200,
+    "Dimension": 30001,
     "Best": 4373320.0,
     "Optimal": false,
     "Encoded Bits": 35,

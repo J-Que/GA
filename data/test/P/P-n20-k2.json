@@ -2,6 +2,7 @@
     "Problem": "P-n20-k2",
     "Set": "Set P",
     "Capacity": 160,
+    "Dimension": 20,
     "Best": 216.0,
     "Optimal": true,
     "Encoded Bits": 21,
