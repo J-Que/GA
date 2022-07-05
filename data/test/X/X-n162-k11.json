@@ -2,6 +2,7 @@
     "Problem": "X-n162-k11",
     "Set": "Uchoa et al.",
     "Capacity": 1174,
+    "Dimension": 162,
     "Best": 14138.0,
     "Optimal": true,
     "Encoded Bits": 31,

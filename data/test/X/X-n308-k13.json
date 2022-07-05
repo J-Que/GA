@@ -2,6 +2,7 @@
     "Problem": "X-n308-k13",
     "Set": "Uchoa et al.",
     "Capacity": 246,
+    "Dimension": 308,
     "Best": 25859.0,
     "Optimal": false,
     "Encoded Bits": 31,

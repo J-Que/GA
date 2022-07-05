@@ -2,6 +2,7 @@
     "Problem": "X-n317-k53",
     "Set": "Uchoa et al.",
     "Capacity": 6,
+    "Dimension": 317,
     "Best": 78355.0,
     "Optimal": true,
     "Encoded Bits": 25,

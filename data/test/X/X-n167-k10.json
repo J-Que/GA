@@ -2,6 +2,7 @@
     "Problem": "X-n167-k10",
     "Set": "Uchoa et al.",
     "Capacity": 133,
+    "Dimension": 167,
     "Best": 20557.0,
     "Optimal": true,
     "Encoded Bits": 28,

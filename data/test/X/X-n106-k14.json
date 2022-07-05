@@ -2,6 +2,7 @@
     "Problem": "X-n106-k14",
     "Set": "Uchoa et al.",
     "Capacity": 600,
+    "Dimension": 106,
     "Best": 26362.0,
     "Optimal": true,
     "Encoded Bits": 31,

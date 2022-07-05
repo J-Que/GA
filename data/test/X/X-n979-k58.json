@@ -2,6 +2,7 @@
     "Problem": "X-n979-k58",
     "Set": "Uchoa et al.",
     "Capacity": 998,
+    "Dimension": 979,
     "Best": 118976.0,
     "Optimal": false,
     "Encoded Bits": 31,

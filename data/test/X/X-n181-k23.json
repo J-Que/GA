@@ -2,6 +2,7 @@
     "Problem": "X-n181-k23",
     "Set": "Uchoa et al.",
     "Capacity": 8,
+    "Dimension": 181,
     "Best": 25569.0,
     "Optimal": true,
     "Encoded Bits": 25,

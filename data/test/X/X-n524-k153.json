@@ -2,6 +2,7 @@
     "Problem": "X-n524-k153",
     "Set": "Uchoa et al.",
     "Capacity": 125,
+    "Dimension": 524,
     "Best": 154593.0,
     "Optimal": true,
     "Encoded Bits": 31,

@@ -2,6 +2,7 @@
     "Problem": "X-n376-k94",
     "Set": "Uchoa et al.",
     "Capacity": 4,
+    "Dimension": 376,
     "Best": 147713.0,
     "Optimal": true,
     "Encoded Bits": 25,

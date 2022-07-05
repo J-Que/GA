@@ -2,6 +2,7 @@
     "Problem": "X-n101-k25",
     "Set": "Uchoa et al.",
     "Capacity": 206,
+    "Dimension": 101,
     "Best": 27591.0,
     "Optimal": true,
     "Encoded Bits": 31,

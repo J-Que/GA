@@ -2,6 +2,7 @@
     "Problem": "X-n237-k14",
     "Set": "Uchoa et al.",
     "Capacity": 18,
+    "Dimension": 237,
     "Best": 27042.0,
     "Optimal": true,
     "Encoded Bits": 25,

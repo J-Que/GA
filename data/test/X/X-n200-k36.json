@@ -2,6 +2,7 @@
     "Problem": "X-n200-k36",
     "Set": "Uchoa et al.",
     "Capacity": 402,
+    "Dimension": 200,
     "Best": 58578.0,
     "Optimal": true,
     "Encoded Bits": 31,

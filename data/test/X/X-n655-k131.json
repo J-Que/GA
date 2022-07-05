@@ -2,6 +2,7 @@
     "Problem": "X-n655-k131",
     "Set": "Uchoa et al.",
     "Capacity": 5,
+    "Dimension": 655,
     "Best": 106780.0,
     "Optimal": true,
     "Encoded Bits": 25,

@@ -2,6 +2,7 @@
     "Problem": "X-n270-k35",
     "Set": "Uchoa et al.",
     "Capacity": 585,
+    "Dimension": 270,
     "Best": 35291.0,
     "Optimal": true,
     "Encoded Bits": 31,

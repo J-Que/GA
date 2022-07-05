@@ -2,6 +2,7 @@
     "Problem": "X-n110-k13",
     "Set": "Uchoa et al.",
     "Capacity": 66,
+    "Dimension": 110,
     "Best": 14971.0,
     "Optimal": true,
     "Encoded Bits": 28,

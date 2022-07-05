@@ -2,6 +2,7 @@
     "Problem": "X-n599-k92",
     "Set": "Uchoa et al.",
     "Capacity": 487,
+    "Dimension": 599,
     "Best": 108451.0,
     "Optimal": false,
     "Encoded Bits": 31,

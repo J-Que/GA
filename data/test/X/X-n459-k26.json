@@ -2,6 +2,7 @@
     "Problem": "X-n459-k26",
     "Set": "Uchoa et al.",
     "Capacity": 1106,
+    "Dimension": 459,
     "Best": 24139.0,
     "Optimal": false,
     "Encoded Bits": 31,

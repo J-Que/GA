@@ -2,6 +2,7 @@
     "Problem": "X-n876-k59",
     "Set": "Uchoa et al.",
     "Capacity": 764,
+    "Dimension": 876,
     "Best": 99299.0,
     "Optimal": false,
     "Encoded Bits": 31,

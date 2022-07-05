@@ -2,6 +2,7 @@
     "Problem": "X-n280-k17",
     "Set": "Uchoa et al.",
     "Capacity": 192,
+    "Dimension": 280,
     "Best": 33503.0,
     "Optimal": false,
     "Encoded Bits": 31,

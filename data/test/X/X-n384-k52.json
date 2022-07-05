@@ -2,6 +2,7 @@
     "Problem": "X-n384-k52",
     "Set": "Uchoa et al.",
     "Capacity": 564,
+    "Dimension": 384,
     "Best": 65928.0,
     "Optimal": false,
     "Encoded Bits": 31,

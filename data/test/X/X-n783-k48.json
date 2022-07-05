@@ -2,6 +2,7 @@
     "Problem": "X-n783-k48",
     "Set": "Uchoa et al.",
     "Capacity": 832,
+    "Dimension": 783,
     "Best": 72386.0,
     "Optimal": false,
     "Encoded Bits": 31,

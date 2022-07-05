@@ -2,6 +2,7 @@
     "Problem": "X-n701-k44",
     "Set": "Uchoa et al.",
     "Capacity": 87,
+    "Dimension": 701,
     "Best": 81923.0,
     "Optimal": false,
     "Encoded Bits": 28,

@@ -2,6 +2,7 @@
     "Problem": "X-n261-k13",
     "Set": "Uchoa et al.",
     "Capacity": 1081,
+    "Dimension": 261,
     "Best": 26558.0,
     "Optimal": true,
     "Encoded Bits": 31,

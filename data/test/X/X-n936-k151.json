@@ -2,6 +2,7 @@
     "Problem": "X-n936-k151",
     "Set": "Uchoa et al.",
     "Capacity": 138,
+    "Dimension": 936,
     "Best": 132715.0,
     "Optimal": false,
     "Encoded Bits": 31,

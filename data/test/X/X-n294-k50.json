@@ -2,6 +2,7 @@
     "Problem": "X-n294-k50",
     "Set": "Uchoa et al.",
     "Capacity": 285,
+    "Dimension": 294,
     "Best": 47161.0,
     "Optimal": false,
     "Encoded Bits": 31,

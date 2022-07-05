@@ -2,6 +2,7 @@
     "Problem": "X-n125-k30",
     "Set": "Uchoa et al.",
     "Capacity": 188,
+    "Dimension": 125,
     "Best": 55539.0,
     "Optimal": true,
     "Encoded Bits": 31,

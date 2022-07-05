@@ -2,6 +2,7 @@
     "Problem": "X-n819-k171",
     "Set": "Uchoa et al.",
     "Capacity": 358,
+    "Dimension": 819,
     "Best": 158121.0,
     "Optimal": false,
     "Encoded Bits": 31,

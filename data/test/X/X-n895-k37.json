@@ -2,6 +2,7 @@
     "Problem": "X-n895-k37",
     "Set": "Uchoa et al.",
     "Capacity": 1816,
+    "Dimension": 895,
     "Best": 53860.0,
     "Optimal": false,
     "Encoded Bits": 31,

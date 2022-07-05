@@ -2,6 +2,7 @@
     "Problem": "X-n393-k38",
     "Set": "Uchoa et al.",
     "Capacity": 78,
+    "Dimension": 393,
     "Best": 38260.0,
     "Optimal": true,
     "Encoded Bits": 28,

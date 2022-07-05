@@ -2,6 +2,7 @@
     "Problem": "X-n223-k34",
     "Set": "Uchoa et al.",
     "Capacity": 37,
+    "Dimension": 223,
     "Best": 40437.0,
     "Optimal": true,
     "Encoded Bits": 28,

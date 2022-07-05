@@ -2,6 +2,7 @@
     "Problem": "X-n195-k51",
     "Set": "Uchoa et al.",
     "Capacity": 181,
+    "Dimension": 195,
     "Best": 44225.0,
     "Optimal": true,
     "Encoded Bits": 31,

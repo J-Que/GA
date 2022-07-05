@@ -2,6 +2,7 @@
     "Problem": "X-n801-k40",
     "Set": "Uchoa et al.",
     "Capacity": 20,
+    "Dimension": 801,
     "Best": 73305.0,
     "Optimal": false,
     "Encoded Bits": 25,

@@ -2,6 +2,7 @@
     "Problem": "X-n429-k61",
     "Set": "Uchoa et al.",
     "Capacity": 536,
+    "Dimension": 429,
     "Best": 65449.0,
     "Optimal": false,
     "Encoded Bits": 31,

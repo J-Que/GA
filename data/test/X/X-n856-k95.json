@@ -2,6 +2,7 @@
     "Problem": "X-n856-k95",
     "Set": "Uchoa et al.",
     "Capacity": 9,
+    "Dimension": 856,
     "Best": 88965.0,
     "Optimal": true,
     "Encoded Bits": 25,

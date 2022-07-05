@@ -2,6 +2,7 @@
     "Problem": "X-n266-k58",
     "Set": "Uchoa et al.",
     "Capacity": 35,
+    "Dimension": 266,
     "Best": 75478.0,
     "Optimal": true,
     "Encoded Bits": 28,

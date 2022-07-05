@@ -2,6 +2,7 @@
     "Problem": "X-n573-k30",
     "Set": "Uchoa et al.",
     "Capacity": 210,
+    "Dimension": 573,
     "Best": 50673.0,
     "Optimal": false,
     "Encoded Bits": 31,

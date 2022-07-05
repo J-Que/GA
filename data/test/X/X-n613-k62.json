@@ -2,6 +2,7 @@
     "Problem": "X-n613-k62",
     "Set": "Uchoa et al.",
     "Capacity": 523,
+    "Dimension": 613,
     "Best": 59535.0,
     "Optimal": false,
     "Encoded Bits": 31,

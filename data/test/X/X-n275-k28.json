@@ -2,6 +2,7 @@
     "Problem": "X-n275-k28",
     "Set": "Uchoa et al.",
     "Capacity": 10,
+    "Dimension": 275,
     "Best": 21245.0,
     "Optimal": true,
     "Encoded Bits": 25,

@@ -2,6 +2,7 @@
     "Problem": "X-n313-k71",
     "Set": "Uchoa et al.",
     "Capacity": 248,
+    "Dimension": 313,
     "Best": 94043.0,
     "Optimal": false,
     "Encoded Bits": 31,

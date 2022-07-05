@@ -2,6 +2,7 @@
     "Problem": "X-n214-k11",
     "Set": "Uchoa et al.",
     "Capacity": 944,
+    "Dimension": 214,
     "Best": 10856.0,
     "Optimal": true,
     "Encoded Bits": 31,

@@ -2,6 +2,7 @@
     "Problem": "X-n367-k17",
     "Set": "Uchoa et al.",
     "Capacity": 218,
+    "Dimension": 367,
     "Best": 22814.0,
     "Optimal": false,
     "Encoded Bits": 31,

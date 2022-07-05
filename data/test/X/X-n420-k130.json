@@ -2,6 +2,7 @@
     "Problem": "X-n420-k130",
     "Set": "Uchoa et al.",
     "Capacity": 18,
+    "Dimension": 420,
     "Best": 107798.0,
     "Optimal": true,
     "Encoded Bits": 28,

@@ -2,6 +2,7 @@
     "Problem": "X-n344-k43",
     "Set": "Uchoa et al.",
     "Capacity": 61,
+    "Dimension": 344,
     "Best": 42050.0,
     "Optimal": false,
     "Encoded Bits": 28,

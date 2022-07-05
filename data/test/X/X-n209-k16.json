@@ -2,6 +2,7 @@
     "Problem": "X-n209-k16",
     "Set": "Uchoa et al.",
     "Capacity": 101,
+    "Dimension": 209,
     "Best": 30656.0,
     "Optimal": true,
     "Encoded Bits": 28,

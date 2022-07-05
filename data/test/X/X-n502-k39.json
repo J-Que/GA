@@ -2,6 +2,7 @@
     "Problem": "X-n502-k39",
     "Set": "Uchoa et al.",
     "Capacity": 13,
+    "Dimension": 502,
     "Best": 69226.0,
     "Optimal": false,
     "Encoded Bits": 25,

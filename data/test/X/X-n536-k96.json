@@ -2,6 +2,7 @@
     "Problem": "X-n536-k96",
     "Set": "Uchoa et al.",
     "Capacity": 371,
+    "Dimension": 536,
     "Best": 94846.0,
     "Optimal": false,
     "Encoded Bits": 31,
