@@ -2,6 +2,7 @@
     "Problem": "A-n65-k9",
     "Set": "Set A",
     "Capacity": 100,
+    "Dimension": 65,
     "Best": 1174.0,
     "Optimal": true,
     "Encoded Bits": 23,

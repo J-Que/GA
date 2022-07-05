@@ -2,6 +2,7 @@
     "Problem": "A-n39-k6",
     "Set": "Set A",
     "Capacity": 100,
+    "Dimension": 39,
     "Best": 831.0,
     "Optimal": true,
     "Encoded Bits": 25,

@@ -2,6 +2,7 @@
     "Problem": "A-n45-k7",
     "Set": "Set A",
     "Capacity": 100,
+    "Dimension": 45,
     "Best": 1146.0,
     "Optimal": true,
     "Encoded Bits": 23,

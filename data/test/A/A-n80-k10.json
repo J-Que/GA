@@ -2,6 +2,7 @@
     "Problem": "A-n80-k10",
     "Set": "Set A",
     "Capacity": 100,
+    "Dimension": 80,
     "Best": 1763.0,
     "Optimal": true,
     "Encoded Bits": 23,
