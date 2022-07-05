@@ -2,6 +2,7 @@
     "Problem": "CMT4",
     "Set": "Christofides, Mingozzi and Toth",
     "Capacity": 200,
+    "Dimension": 151,
     "Best": 1028.42,
     "Optimal": true,
     "Encoded Bits": 24,

@@ -2,6 +2,7 @@
     "Problem": "CMT9",
     "Set": "Christofides, Mingozzi and Toth",
     "Capacity": 200,
+    "Dimension": 151,
     "Best": 1162.55,
     "Optimal": true,
     "Encoded Bits": 24,

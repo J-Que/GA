@@ -2,6 +2,7 @@
     "Problem": "E-n101-k8",
     "Set": "Set E",
     "Capacity": 200,
+    "Dimension": 101,
     "Best": 817.0,
     "Optimal": true,
     "Encoded Bits": 24,

@@ -2,6 +2,7 @@
     "Problem": "F-n45-k4",
     "Set": "Set F",
     "Capacity": 2010,
+    "Dimension": 45,
     "Best": 724.0,
     "Optimal": true,
     "Encoded Bits": 31,

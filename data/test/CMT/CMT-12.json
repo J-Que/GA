@@ -2,6 +2,7 @@
     "Problem": "CMT12",
     "Set": "Christofides, Mingozzi and Toth",
     "Capacity": 200,
+    "Dimension": 101,
     "Best": 819.56,
     "Optimal": true,
     "Encoded Bits": 24,

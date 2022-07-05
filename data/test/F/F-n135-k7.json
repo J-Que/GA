@@ -2,6 +2,7 @@
     "Problem": "F-n135-k7",
     "Set": "Set F",
     "Capacity": 2210,
+    "Dimension": 135,
     "Best": 1162.0,
     "Optimal": true,
     "Encoded Bits": 30,

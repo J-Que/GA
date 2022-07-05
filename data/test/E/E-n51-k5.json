@@ -2,6 +2,7 @@
     "Problem": "E-n51-k5",
     "Set": "Set E",
     "Capacity": 160,
+    "Dimension": 51,
     "Best": 521.0,
     "Optimal": true,
     "Encoded Bits": 22,

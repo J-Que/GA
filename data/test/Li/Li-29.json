@@ -2,6 +2,7 @@
     "Problem": "Li_29",
     "Set": "Li et al.",
     "Capacity": 2000,
+    "Dimension": 961,
     "Best": 29154.34,
     "Optimal": false,
     "Encoded Bits": 31,

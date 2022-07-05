@@ -2,6 +2,7 @@
     "Problem": "F-n72-k4",
     "Set": "Set F",
     "Capacity": 30000,
+    "Dimension": 72,
     "Best": 237.0,
     "Optimal": true,
     "Encoded Bits": 30,

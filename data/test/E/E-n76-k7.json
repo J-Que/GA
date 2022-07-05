@@ -2,6 +2,7 @@
     "Problem": "E-n76-k7",
     "Set": "Set E",
     "Capacity": 220,
+    "Dimension": 76,
     "Best": 682.0,
     "Optimal": true,
     "Encoded Bits": 24,

@@ -2,6 +2,7 @@
     "Problem": "E-n76-k10",
     "Set": "Set E",
     "Capacity": 140,
+    "Dimension": 76,
     "Best": 830.0,
     "Optimal": true,
     "Encoded Bits": 24,

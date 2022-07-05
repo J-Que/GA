@@ -2,6 +2,7 @@
     "Problem": "E-n33-k4",
     "Set": "Set E",
     "Capacity": 8000,
+    "Dimension": 33,
     "Best": 835.0,
     "Optimal": true,
     "Encoded Bits": 30,

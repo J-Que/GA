@@ -2,6 +2,7 @@
     "Problem": "E-n22-k4",
     "Set": "Set E",
     "Capacity": 6000,
+    "Dimension": 22,
     "Best": 375.0,
     "Optimal": true,
     "Encoded Bits": 29,

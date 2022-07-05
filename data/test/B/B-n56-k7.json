@@ -2,6 +2,7 @@
     "Problem": "B-n56-k7",
     "Set": "Set B",
     "Capacity": 100,
+    "Dimension": 56,
     "Best": 707.0,
     "Optimal": true,
     "Encoded Bits": 23,

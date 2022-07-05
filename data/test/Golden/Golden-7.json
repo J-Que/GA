@@ -2,6 +2,7 @@
     "Problem": "Golden_7",
     "Set": "Golden et al.",
     "Capacity": 900,
+    "Dimension": 361,
     "Best": 10181.75,
     "Optimal": false,
     "Encoded Bits": 29,
