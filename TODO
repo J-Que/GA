@@ -1,5 +1,3 @@
-1. Create file for reading in parameters, attributes, and the problem nodes
-2. Create script to compile parameters in main script
-3. profile code , perf 
-4. Set up IDE with code, git, and tests
-#notion todo, txt book tdo
+Create config script
+profile code , perf
+work on die debugger
