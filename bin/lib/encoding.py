@@ -79,7 +79,8 @@ class Encoder():
         y      = self.coordinates[n][2]
         x      = self.coordinates[n][1] << self.yBits
         demand = self.demand[n] << (self.xBits + self.yBits)
-        self.nodes = np.append(self.nodes, demand + x + y)
+        index = self.coordinates[n][0] << (self.xBits + self.yBits + self.demandBits)
+        self.nodes = np.append(self.nodes, index + demand + x + y)
    
         
     # adjust all nodes so that they may be encoded
