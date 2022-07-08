@@ -56,7 +56,7 @@ def boolOptimality(str):
 
 
 def getData(dir, file):
-    data = {"Problem":file[:-4], "Set":sets[dir], "Capacity":None, "Dimension":None, "Best":None, "Optimal":None, "Encoded Bits":None, "X Bits":None, "Y Bits":None, "Demand Bits":None, "Depot Bits":None, "Nodes":None}
+    data = {"Problem":file[:-4], "Set":sets[dir], "Capacity":None, "Dimension":None, "Best":None, "Optimal":None, "Encoded Bits":None, "X Bits":None, "Y Bits":None, "Demand Bits":None, "Index Bits":None, "Depot Bits":None, "Nodes":None}
     with open("data/raw/" + dir + "/" + file, "r") as f:
         lines = f.readlines()
         for index, line in enumerate(lines):
@@ -88,6 +88,7 @@ def main(dir, file):
     data["X Bits"]       = encoder.xBits
     data["Y Bits"]       = encoder.yBits
     data["Demand Bits"]  = encoder.demandBits
+    data["Index Bits"]   = encoder.indexBits
     data["Depot Bits"]   = encoder.depotBits
 
     for i in data:

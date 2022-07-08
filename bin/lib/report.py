@@ -39,7 +39,7 @@ class Report():
         
         print("\nGenetic Algorithm with Two-Opt Optimization")
         print("-" * 132)
-        bits, i, d, x, y, m = self.ga["encoded bits"], self.ga["encoded bits"], self.ga["demand bits"], self.ga["x bits"], self.ga["y bits"], self.params["mutation rate"]
+        bits, i, d, x, y, m = self.ga["encoded bits"], self.ga["index bits"], self.ga["demand bits"], self.ga["x bits"], self.ga["y bits"], self.params["mutation rate"]
         print(f"Crossover:    One-Point            Mutation:    Inverse               Selection:  Elitist                Mutation Rate:  {m:<14}")
         g, m, s = self.params["generations"], self.cpu["M"], (bits * self.cpu["M"] * n)/8_000_000
         print(f"Generations:  {g:<20} Pop Size:    {m:<21} Memory MB:  {s:<22} Encoded Bits:   {bits:<17}")
