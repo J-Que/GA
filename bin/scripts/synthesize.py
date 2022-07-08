@@ -19,18 +19,18 @@ def getNodes(index, lines, data):
 
     # add the node info
     nodes, demand = [], []
-    index = 0
-
+    index = -1
     # get the demand
     for n in range(demandStart, demandEnd):
         demand.append(float(lines[n].split()[-1]))
 
-    # if the depot is at the begining then place it at the end
-    if demand[0] == 0:
-        depot = demand.pop(0)
-        demand.insert(-1, depot)
-        depot = lines.pop(nodeStart)
-        lines.insert(nodeEnd - 1, depot)
+    # if the depot is at the end then place it at the begining
+    if demand[-1] == 0:
+        if demand[0] != 0:
+            depot = demand.pop(-1)
+            demand.insert(0, depot)
+            depot = lines.pop(nodeEnd - 1)
+            lines.insert(nodeStart, depot)
 
     # get the remaining info
     for n in range(nodeStart, nodeEnd):
@@ -38,7 +38,9 @@ def getNodes(index, lines, data):
         nodes.append([index, float(node[1]), float(node[2]), 0, 0])
         index += 1
 
-    return nodes, demand
+    # seperate the nodes and depot
+    depot = nodes[0]
+    return nodes, demand, depot
 
 
 def optimality(dir, file):
@@ -56,7 +58,7 @@ def boolOptimality(str):
 
 
 def getData(dir, file):
-    data = {"Problem":file[:-4], "Set":sets[dir], "Capacity":None, "Dimension":None, "Best":None, "Optimal":None, "Encoded Bits":None, "X Bits":None, "Y Bits":None, "Demand Bits":None, "Index Bits":None, "Depot Bits":None, "Nodes":None}
+    data = {"Problem":file[:-4], "Set":sets[dir], "Capacity":None, "Dimension":None, "Best":None, "Optimal":None, "Encoded Bits":None, "X Bits":None, "Y Bits":None, "Demand Bits":None, "Index Bits":None, "Depot Bits":None, "Depot":None, "Nodes":None}
     with open("data/raw/" + dir + "/" + file, "r") as f:
         lines = f.readlines()
         for index, line in enumerate(lines):
@@ -67,7 +69,8 @@ def getData(dir, file):
             elif line[0:3] == "DIM":                data["Dimension"] = int(line.split(" : ")[-1])
             elif line[0:3] == "CAP":                data["Capacity"]  = int(line.split(" : ")[-1])
             elif line[0:3] == "NOD":                
-                nodes, demand = getNodes(index, lines, data)
+                nodes, demand, depot = getNodes(index, lines, data)
+                data["Depot"] = [depot[1], depot[2]]
                 break
 
     return data, nodes, demand
@@ -102,8 +105,8 @@ def main(dir, file):
         nodes[n][-2] = demand[n]
         nodes[n][-1] = encoder.nodes[n] # add the enocded nodes
 
-    try:    data["Nodes"] = np.array(nodes, dtype=np.int32).tolist()
-    except: data["Nodes"] = np.array(nodes, dtype=np.int64).tolist()
+    try:    data["Nodes"] = np.array(nodes, dtype=np.int32)[1:].tolist()
+    except: data["Nodes"] = np.array(nodes, dtype=np.int64)[1:].tolist()
     #except: data["Nodes"] = np.array(nodes, dtype=np.longlong).tolist()
 
     if   dir == "tai"   : newName = "tai-"    + file[3:-4]
