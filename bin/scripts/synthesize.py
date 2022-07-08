@@ -17,14 +17,27 @@ def getNodes(index, lines, data):
     demandStart = nodeEnd + 1
     demandEnd = demandStart + data["Dimension"]
 
-    # add the node info
+# add the node info
     nodes, demand = [], []
-    for n in range(nodeStart, nodeEnd):
-        node = lines[n].split()
-        nodes.append([int(node[0]), float(node[1]), float(node[2]), 0, 0])
+    index = 0
 
+    # get the demand
     for n in range(demandStart, demandEnd):
         demand.append(float(lines[n].split()[-1]))
+
+    # if the depot is at the end then place it at the begining
+    if demand[-1] == 0:
+        if demand[0] != 0:
+            depot = demand.pop()
+            demand.insert(0, depot)
+            depot = lines.pop(nodeEnd - 1)
+            lines.insert(nodeStart, depot)
+
+    # get the remaining info
+    for n in range(nodeStart, nodeEnd):
+        node = lines[n].split()
+        nodes.append([index, float(node[1]), float(node[2]), 0, 0])
+        index += 1
 
     return nodes, demand
 
