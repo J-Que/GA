@@ -25,13 +25,12 @@ def getNodes(index, lines, data):
     for n in range(demandStart, demandEnd):
         demand.append(float(lines[n].split()[-1]))
 
-    # if the depot is at the end then place it at the begining
-    if demand[-1] == 0:
-        if demand[0] != 0:
-            depot = demand.pop()
-            demand.insert(0, depot)
-            depot = lines.pop(nodeEnd - 1)
-            lines.insert(nodeStart, depot)
+    # if the depot is at the begining then place it at the end
+    if demand[0] == 0:
+        depot = demand.pop(0)
+        demand.insert(-1, depot)
+        depot = lines.pop(nodeStart)
+        lines.insert(nodeEnd - 1, depot)
 
     # get the remaining info
     for n in range(nodeStart, nodeEnd):

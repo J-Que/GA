@@ -2,12 +2,13 @@ import numpy as np
 
 
 class Encoder():
-    def __init__(self, nodes, demand, file, xBits=11, yBits=11, demandBits=9, depotBits=2):
+    def __init__(self, nodes, demand, file, xBits, yBits, demandBits, indexBits, depotBits=1):
         self.coordinates = nodes
         self.demand = demand
         self.xBits = xBits
         self.yBits = yBits
         self.demandBits = demandBits
+        self.indexBits = indexBits
         self.depotBits = depotBits
         self.N = len(self.demand)
         self.file = file
@@ -20,8 +21,8 @@ class Encoder():
         self.coordinates = np.array(self.coordinates)[:, 1:3]
 
         # subtract the minimum value to get a range from 0 to max
-        self.coordinates[:, 0] = self.coordinates[:, 0] - np.min(self.coordinates[:, 0])
         self.coordinates[:, 1] = self.coordinates[:, 1] - np.min(self.coordinates[:, 1])
+        self.coordinates[:, 2] = self.coordinates[:, 2] - np.min(self.coordinates[:, 2])
 
         # round the coordinates
         self.coordinates = np.round(self.coordinates)
@@ -44,9 +45,15 @@ class Encoder():
 
     # get the number of bits for each attribute
     def bit_sizes(self):
-        maxX = int(np.max(self.coordinates, 0)[0])
-        maxY = int(np.max(self.coordinates, 0)[1])
+        maxI = int(np.max(self.coordinates, 0)[0])
+        maxX = int(np.max(self.coordinates, 0)[1])
+        maxY = int(np.max(self.coordinates, 0)[2])
         maxD = int(np.max(self.demand))
+
+        for i in range(64):
+            if maxI < pow(2, i):
+                self.indexBits = i + 1
+                break
 
         for i in range(64):
             if maxX < pow(2, i):
@@ -69,8 +76,8 @@ class Encoder():
 
     # encode a node
     def encode(self, n):
-        y      = self.coordinates[n][1]
-        x      = self.coordinates[n][0] << self.yBits
+        y      = self.coordinates[n][2]
+        x      = self.coordinates[n][1] << self.yBits
         demand = self.demand[n] << (self.xBits + self.yBits)
         self.nodes = np.append(self.nodes, demand + x + y)
    
