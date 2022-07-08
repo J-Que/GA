@@ -2,13 +2,9 @@ import numpy as np
 
 
 class Encoder():
-    def __init__(self, nodes, demand, file, xBits, yBits, demandBits, indexBits, depotBits=1):
+    def __init__(self, nodes, demand, file, depotBits=1):
         self.coordinates = nodes
         self.demand = demand
-        self.xBits = xBits
-        self.yBits = yBits
-        self.demandBits = demandBits
-        self.indexBits = indexBits
         self.depotBits = depotBits
         self.N = len(self.demand)
         self.file = file
@@ -18,14 +14,15 @@ class Encoder():
     # normalize the coordinates
     def normalize(self):
         # get the x and y
-        self.coordinates = np.array(self.coordinates)[:, 1:3]
+        self.coordinates = np.array(self.coordinates)
 
         # subtract the minimum value to get a range from 0 to max
         self.coordinates[:, 1] = self.coordinates[:, 1] - np.min(self.coordinates[:, 1])
         self.coordinates[:, 2] = self.coordinates[:, 2] - np.min(self.coordinates[:, 2])
 
         # round the coordinates
-        self.coordinates = np.round(self.coordinates)
+        self.coordinates[:, 1] = np.round(self.coordinates[:, 1])
+        self.coordinates[:, 2] = np.round(self.coordinates[:, 2])
 
         # change to integer
         self.coordinates = self.coordinates.astype('int64')
