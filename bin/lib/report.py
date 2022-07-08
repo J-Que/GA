@@ -39,17 +39,17 @@ class Report():
         
         print("\nGenetic Algorithm with Two-Opt Optimization")
         print("-" * 132)
-        bits, d, x, y, m = self.ga["encoded bits"], self.ga["demand bits"], self.ga["x bits"], self.ga["y bits"], self.params["mutation rate"]
-        print(f"Encoded Bits:  {bits:<19} X Bits:  {x:<25} Y Bits:  {y:<25} Demand Bits:  {d:<16}")
-        print(f"Crossover:  One-Point              Mutation:  Inverse                 Selection:  Elitist                Mutation Rate:  {m:<14}")
+        bits, i, d, x, y, m = self.ga["encoded bits"], self.ga["encoded bits"], self.ga["demand bits"], self.ga["x bits"], self.ga["y bits"], self.params["mutation rate"]
+        print(f"Crossover:    One-Point            Mutation:    Inverse               Selection:  Elitist                Mutation Rate:  {m:<14}")
         g, m, s = self.params["generations"], self.cpu["M"], (bits * self.cpu["M"] * n)/8_000_000
-        print(f"Max Generations:  {g:<16} Population Size:  {m:<16} Memory MB:  {s:<18}")
+        print(f"Generations:  {g:<20} Pop Size:    {m:<21} Memory MB:  {s:<22} Encoded Bits:   {bits:<17}")
+        print(f"Index Bits:   {i:<20} X Bits:      {x:<21} Y Bits:     {y:<22} Demand Bits:    {d:<14}")
 
         t, q = self.cpu["number of threads"], self.cpu["nodes per thread"]
-        print(f"Threads:  {t:<24} Individuals/Thread:  {q:<10}")
+        print(f"Threads:      {t:<20} Ind/Thread:  {q:<10}")
 
-        gen, cost, gap, t, spg = "Ge", "Cost", "Gap", "Time", "s/Gen"
-        print(f"\n{gen:<20} {cost:<20} {gap:<20} {t:<20} {spg:<20}")
+        gen, cost, gap, t, spg = "Gen", "Cost", "Gap", "Time", "s/Gen"
+        print(f"\n\n\n{gen:<25} {cost:<25} {gap:<25} {t:<25} {spg:<25}")
         print("-" * 132)
 
 
