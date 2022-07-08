@@ -17,7 +17,7 @@ def getNodes(index, lines, data):
     demandStart = nodeEnd + 1
     demandEnd = demandStart + data["Dimension"]
 
-# add the node info
+    # add the node info
     nodes, demand = [], []
     index = 0
 
