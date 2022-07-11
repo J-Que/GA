@@ -4,27 +4,23 @@ import subprocess
 os.chdir(os.path.dirname(__file__) + "/../../")
 sys.path.insert(0, 'bin/scripts')
 sys.path.insert(0, 'bin/lib')
-import config
+import config as configs
 import report
-
-
-def main():
-    process = subprocess.Popen("pwd", stdout=subprocess.PIPE)
-    return process.communicate()
 
 
 if __name__ == "__main__":
     
     # configure the file
-    config = config.Manager(sys.argv)
-    config.config()
+    config = configs.Manager(sys.argv)
+    config.configure()
 
     # print a report header
     myReport = report.Report(config)
     myReport.header()
 
     # run the algorithm
-    #soutput, error = main()
+   # proc = subprocess.Popen(["g++", "bin/main/ex.cpp", "-o", "main"])
+   # proc.wait()
 
     # report on the results
     #report.save()

@@ -1,5 +1,6 @@
 import os
 import json
+import subprocess
 import multiprocessing
 import numpy as np
 os.chdir(os.path.dirname(__file__) + "/../../")
@@ -14,11 +15,13 @@ class Manager():
         self.options = {"g":"generations", "l":"population mulitplier", "m":"mutation rate", "p":"problem"}
         
         # read in parameters
-        with open("params.json", "r") as f: 
-            self.params = json.load(f)
+        with open("params.json", "r") as f:  self.params = json.load(f)
 
         # attributes of the algorithm
         self.attrs = {"CVRP":{}, "GA":{}, "CPU":{}, "GPU":{}, "RL":{}}
+
+        # for containing lines to write
+        self.lines = []
 
 
     # search the arguements and overwrite any given arguement
@@ -37,6 +40,8 @@ class Manager():
         self.attrs["CVRP"].update({"best":    df["Best"]})
         self.attrs["CVRP"].update({"optimal": df["Optimal"]})
         self.attrs["CVRP"].update({"depot":   df["Nodes"][0][-1]})
+        self.attrs["CVRP"].update({"Depot X": df["Depot"][0]})
+        self.attrs["CVRP"].update({"Depot Y": df["Depot"][1]})
         self.attrs["CVRP"].update({"N":       len(df["Nodes"])})
 
 
@@ -44,12 +49,13 @@ class Manager():
     def __ga(self, df):
         self.attrs["GA"].update({"encoded bits":df["Encoded Bits"]})
         self.attrs["GA"].update({"demand bits": df["Demand Bits"]})
+        self.attrs["GA"].update({"index bits":df["Index Bits"]})
         self.attrs["GA"].update({"x bits":      df["X Bits"]})
         self.attrs["GA"].update({"y bits":      df["Y Bits"]})
 
 
     # get the attributes for the multi-threading
-    def __cpu(self, df):
+    def __cpu(self):
         threads = multiprocessing.cpu_count()
         M = (2 * threads) * ((self.params["population multiplier"] * self.attrs["CVRP"]["N"]) // (2 * threads))
         self.attrs["CPU"].update({"M":M, "number of threads":threads, "nodes per thread":M//threads})
@@ -60,53 +66,55 @@ class Manager():
         with open("data/test/" + self.params["problem"].split("-")[0] + "/" + self.params["problem"] + ".json", "r") as f: df = json.load(f)
         self.__cvrp(df)
         self.__ga(df)
-        self.__cpu(df)
+        self.__cpu()
         self.nodes = df["Nodes"]
 
 
-    def __write(self, arr):
-        line = "\n    "
-        for node in arr: line += str(node) + ", "
-        return line[:-2] + "],"
+    # convert the population into a stirng
+    def __write(self):
+        for arr in self.population:
+            line = "\n    {"
+            for node in arr:  line += str(node) + ", "
+            line = line[:-2] + "},"
+            self.lines.append(line)
 
 
+    # save the population
     def __save(self):
-        lines = [arr[i] for i in range(len)]
-
-
-
-        # save the population
         with open("population.cpp", "w") as f:
-
-            M, N = str(self.attrs["CPU"]["M"]), str(self.attrs["CVRP"]["N"])
-            f.write("int[" + M + "][" + N + "] population = [")
-            for arr in self.population[:-1]:
-                f.write("\n    [")
-                for node in arr[:-1]: f.write(str(node) + ",  ")
-                f.write(str(arr[-1]) + "],")
-            for node in self.population[-1]: f.write(str(node) + ",  ")
-            f.write(str(self.population[-1][-1]) + "],\n];")
-
+            M = str(self.attrs["CPU"]["M"])
+            N = str(self.attrs["CVRP"]["N"])
+            f.write("int population[" + M + "][" + N + "] = {")
+            for arr in self.lines: f.write(arr)
+            f.write("\n};")
 
     # create a population for the problem
-    def __genZ(self):
+    def __population(self):
         # create a random population
-        self.population = np.array(self.nodes[1:])[:,-1]
+        self.population = np.array(self.nodes[:])[:,-1]
         self.population = np.tile(self.population, (5, 1))
-        for arr in self.population: np.random.shuffle(arr)                
+        for arr in self.population: np.random.shuffle(arr)
+
+        # write and save the files
+        self.__write()
+        self.__save()
 
 
+    # pass in the configurations to the algorithm file to meta program it
     def __meta(self): pass
 
 
-    def __compile(self): pass
+    # compile the algorithm file
+    def __compile(self):
+        proc = subprocess.Popen(["g++", "bin/main/evolve.cpp", "-o", "bin/main/evolve.out"])
+        proc.wait()
 
 
     # configure the algorithm file according to the parameters and the problem attributes
-    def config(self):
+    def configure(self):
         self.__overwrite()
         self.__attributes()
-        self.__genZ()
+        self.__population()
         self.__meta()
         self.__compile()
         
