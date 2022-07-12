@@ -81,12 +81,20 @@ class Manager():
 
     # save the population
     def __save(self):
-        with open("population.cpp", "w") as f:
+        lines = []
+        with open("bin/main/header.h", "r") as f:
+            for line in f.readlines():
+                if line[:7] == "int pop": break
+                else: lines.append(line)
+ 
+        with open("bin/main/header.h", "w") as f:
+            for line in lines: f.write(line)
             M = str(self.attrs["CPU"]["M"])
             N = str(self.attrs["CVRP"]["N"])
             f.write("int population[" + M + "][" + N + "] = {")
             for arr in self.lines: f.write(arr)
             f.write("\n};")
+
 
     # create a population for the problem
     def __population(self):
