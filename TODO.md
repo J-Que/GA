@@ -1,4 +1,7 @@
 # TODO
+- [ ] crossover
+- [ ] mutation
+- [ ] selection
 - [ ] design meta programmer
 - [ ] add summary to report class
 - [ ] reformat and save output
